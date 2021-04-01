@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import Title from "./Components/Title";
 import Player from "./Components/Player";
-import Dropdown from "react-bootstrap/Dropdown";
+
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-import DropdownButton from "react-bootstrap/DropdownButton";
+
 import { Form, FormControl, InputGroup, Modal } from "react-bootstrap";
 import { uuid } from "uuidv4";
 
@@ -42,7 +42,7 @@ function App() {
   }, []);
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_Key, JSON.stringify(players));
-  }, [setPlayers]);
+  }, [players]);
 
   function handelForm(e) {
     console.log(refPlayer.current.value);
